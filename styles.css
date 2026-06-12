@@ -36,55 +36,20 @@ img { max-width: 100%; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 5vw;
+  padding: 10px 5vw;
   box-shadow: 0 4px 20px rgba(0, 0, 0, .08);
 }
 
-.brand { display: flex; align-items: center; gap: 12px; }
-
-.brand-mark {
-  width: 58px;
-  height: 58px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, var(--green-dark), var(--green-bright));
-  color: #fff;
-  display: grid;
-  place-items: center;
-  font-size: 25px;
-  font-weight: 900;
-  letter-spacing: -2px;
-  position: relative;
-  box-shadow: 0 8px 24px rgba(15, 107, 63, .25);
+.brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
-.brand-mark::after {
-  content: "";
-  position: absolute;
-  right: 8px;
-  top: 9px;
-  width: 18px;
-  height: 30px;
-  border-radius: 20px 0 20px 0;
-  background: var(--gold);
-  transform: rotate(35deg);
-  opacity: .95;
-}
-
-.brand-text strong {
+.site-logo {
+  height: 85px;
+  width: auto;
   display: block;
-  font-size: 22px;
-  line-height: 1;
-  color: var(--green-dark);
-}
-
-.brand-text small {
-  display: block;
-  font-size: 12px;
-  color: var(--muted);
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  margin-top: 5px;
 }
 
 .nav {
@@ -478,15 +443,31 @@ img { max-width: 100%; }
   .service-list {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .site-logo {
+    height: 72px;
+  }
+
+  .nav {
+    gap: 16px;
+  }
 }
 
 @media (max-width: 850px) {
   .menu-toggle { display: block; }
 
+  .site-header {
+    padding: 8px 5vw;
+  }
+
+  .site-logo {
+    height: 62px;
+  }
+
   .nav {
     display: none;
     position: absolute;
-    top: 86px;
+    top: 78px;
     left: 0;
     right: 0;
     background: #fff;
@@ -525,11 +506,26 @@ img { max-width: 100%; }
     align-items: flex-start;
   }
 
-  .brand-text small { display: none; }
-  .brand-text strong { font-size: 19px; }
-
   .portfolio-card,
   .work-card {
     min-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-logo {
+    height: 54px;
+  }
+
+  .nav {
+    top: 70px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .big-phone {
+    font-size: 28px;
   }
 }

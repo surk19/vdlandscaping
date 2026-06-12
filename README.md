@@ -2,9 +2,7 @@
 
 Static HTML/CSS/JS website for GitHub Pages.
 
-## Upload structure
-
-Upload these files to the repository root:
+## Required structure
 
 ```text
 .nojekyll
@@ -18,6 +16,7 @@ script.js
 README.md
 assets/
   images/
+    logo.png
     hero-paver-patio-firepit.jpg
     curved-backyard-paver-patio.jpg
     firepit-seating-wall-walkway.jpg
@@ -40,7 +39,7 @@ assets/
 
 ## Custom domain
 
-In GitHub Pages custom domain, use:
+Use:
 
 ```text
 vdlandscapepros.com
